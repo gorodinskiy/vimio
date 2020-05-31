@@ -14,8 +14,15 @@ set background=dark
 " colorscheme nord
 " colorscheme iceberg
 
+let g:material_terminal_italics = 1
 let g:material_theme_style = 'palenight'
 
 let g:lightline = { 'colorscheme': 'material_vim' }
 colorscheme material
 let g:airline_theme = 'material'
+
+if has('nvim')
+    highlight Statement cterm=italic gui=italic
+    " highlight Special cterm=italic gui=italic
+    highlight Comment cterm=italic gui=italic
+endif
