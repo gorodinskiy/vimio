@@ -274,7 +274,9 @@ call plug#begin()
 
 " Typescript {{{
     if has('nvim')
-        Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+        " Plug 'HerringtonDarkholme/yats.vim', { 'for': 'typescript' }
+        " https://github.com/HerringtonDarkholme/yats.vim/pull/189
+        Plug 'gko/yats.vim', { 'for': 'typescript' }
     else
         " TODO remove once merged https://github.com/leafgarland/typescript-vim/pull/140
         autocmd BufRead,BufNewFile *.tsx setfiletype typescriptreact
