@@ -1,0 +1,3 @@
+" requires specific font
+Plug 'ryanoasis/vim-devicons', { 'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFind'] }
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'

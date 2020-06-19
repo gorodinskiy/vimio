@@ -20,6 +20,13 @@ On unix and windows(with bash which can be installed with [git](http://msysgit.g
 curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 ```
 
+### Your config
+
+If you create `~/.vimrc.local` it will be loaded before the end of `vim-plug`.
+So you can add a custom config + vim plugins of your choice there.
+
+Example [.vimrc.local](/.vimrc.local).
+
 ### Color scheme
 
 You can have a `~/.vimrc_background` file, where you keep custom colorscheme

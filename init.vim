@@ -142,8 +142,7 @@ call plug#begin()
     Plug 'itchyny/lightline.vim'
     " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
-    " requires specific font
-    " Plug 'ryanoasis/vim-devicons', { 'on':  'NERDTreeToggle' }
+
     Plug 'sedm0784/vim-you-autocorrect', {
             \ 'on': [
                 \ 'EnableAutocorrect',
@@ -202,6 +201,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'Lokaltog/vim-monotone'
     Plug 'arzg/vim-colors-xcode'
     Plug 'rakr/vim-one'
     Plug 'sainnhe/sonokai'
@@ -390,8 +390,9 @@ call plug#begin()
     Plug 'juliosueiras/vim-terraform-completion'
 " }}}
 
+" Your part of config {{{
+    if filereadable(expand("~/.vimrc.local"))
+        source ~/.vimrc.local
+    endif
+" }}}
 call plug#end()
-
-if filereadable(expand("~/.vim/regexlist.vim"))
-    source ~/.vim/regexlist.vim
-endif
