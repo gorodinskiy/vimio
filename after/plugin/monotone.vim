@@ -1,0 +1,1 @@
+let g:monotone_emphasize_comments = 1 " Emphasize comments

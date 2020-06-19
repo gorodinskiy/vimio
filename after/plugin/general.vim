@@ -82,6 +82,9 @@ else
     set inccommand=nosplit
 end
 
+set splitbelow
+set splitright
+
 "Optimize for fast terminal connections
 set ttyfast
 
