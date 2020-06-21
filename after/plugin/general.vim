@@ -13,21 +13,21 @@ set ttimeoutlen=50
 " to keep cursor in the center of the screen (almost identical to 'zz')
 " set scrolloff=50
 
-"Don’t add empty newlines at the end of files
-"this has to go before expandtab
+" Don’t add empty newlines at the end of files
+" this has to go before expandtab
 set binary
 set noeol
 
-"Don’t reset cursor to start of line when moving around.
+" Don’t reset cursor to start of line when moving around.
 set nostartofline
 
-"Show the filename in the window titlebar
+" Show the filename in the window titlebar
 set title
 
 "Show the (partial) command as it’s being typed
 set showcmd
 
-"hate modelines
+" hate modelines
 set modelines=0
 set nomodeline
 
@@ -36,21 +36,20 @@ set ruler
 set cursorline
 set lazyredraw
 
-"backups
+" backups
 set nobackup       "no backup files
 set nowritebackup  "only in case you don't want a backup file while editing
 set noswapfile     "no swap files
 "set backupdir=$HOME/tmp
 
-"line numbers
+" line numbers
 set number
 
 set showtabline=1
 set wrap                " line breaking (http://vimcasts.org/episodes/soft-wrapping-text/)
 
-"if version >= 703
-"  set colorcolumn=80 " 80 column
-"end
+" if version >= 703
+"   set colorcolumn=80 " 80 column end
 " disable colorcolumn
 set cc=
 
@@ -58,24 +57,27 @@ set textwidth=80
 set formatoptions-=o    " dont continue comments when pushing o/O
 set linebreak           " line breaking without breaking word
 
+" https://vim.fandom.com/wiki/Increasing_or_decreasing_numbers
+set nrformats+=alpha
+
 " http://www.allaboutvim.ru/2012/03/blog-post.html
 set path=.,,**
 
 " don't show pair quote
-"let loaded_matchparen=1
+" let loaded_matchparen=1
 set noshowmatch " don't show pair <> в HTML
 
-"status line
+" status line
 set laststatus=2
 
-"set paste
+" set paste
 set nopaste
 
-"Make vim more useful
+" Make vim more useful
 set nocompatible
 
 if !has("nvim")
-    "Allow cursor keys in insert mode
+    " Allow cursor keys in insert mode
     set esckeys
 else
     " https://neovim.io/doc/user/options.html#'inccommand'
@@ -85,19 +87,19 @@ end
 set splitbelow
 set splitright
 
-"Optimize for fast terminal connections
+" Optimize for fast terminal connections
 set ttyfast
 
-"Add the g flag to search/replace by default
+" Add the g flag to search/replace by default
 set gdefault
 
-"backspace
+" backspace
 set backspace=indent,eol,start
 
-"Don’t show the intro message when starting vim
-"set shortmess=I
+" Don’t show the intro message when starting vim
+" set shortmess=I
 
-"in case if you don't open a file
+" in case if you don't open a file
 " cd $HOME
 cd %:p:h
 
