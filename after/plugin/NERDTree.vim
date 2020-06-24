@@ -1,3 +1,14 @@
+" slightly better version of this hint: https://github.com/preservim/nerdtree#how-can-i-map-a-specific-key-or-shortcut-to-open-nerdtree
+function OpenNerdTree()
+    if &filetype == 'nerdtree' || empty(expand('%:p'))
+        :NERDTreeToggle
+    else
+        :NERDTreeFind
+    endif
+endfunction
+
+nnoremap <C-n> :call OpenNerdTree()<CR>
+
 " NERDTree
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>m :NERDTreeFind<CR>
