@@ -72,11 +72,11 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
 see more info in this article: https://dev.to/konstantin/taking-notes-in-vim-revisited-558k
 you can find the code here:
-https://github.com/gko/vimio/blob/03a5385a84e0ebb2ac2a0cbf221c45460e780a50/after/plugin/shortcuts.vim#L225-L230
+https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after/plugin/shortcuts.vim#L225-L229
 
 and here
 
-https://github.com/gko/vimio/blob/03a5385a84e0ebb2ac2a0cbf221c45460e780a50/after/plugin/filetypes.vim#L28-L32
+https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after/plugin/filetypes.vim#L28-L32
 
 #### Checkboxes
 
