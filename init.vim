@@ -93,9 +93,6 @@ call plug#begin()
     " https://github.com/szw/vim-g/pull/19
     Plug 'gko/vim-g'
     Plug 'airblade/vim-rooter'
-    " neither works
-    " Plug 'wsdjeg/FlyGrep.vim'
-    " Plug 'wsdjeg/vim-todo', { 'on':  'OpenTodo' }
 
     " if has('patch-8.1.2114') || has('nvim-0.4')
     " Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
@@ -361,7 +358,6 @@ call plug#begin()
 " }}}
 
 " Markdown {{{
-    " Plug 'aserebryakov/vim-todo-lists', { 'for': 'todo' }
     Plug 'jkramer/vim-checkbox', { 'for': 'markdown' }
     Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
