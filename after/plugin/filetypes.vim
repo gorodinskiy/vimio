@@ -24,3 +24,9 @@ autocmd BufRead,BufNewFile *.sbt set filetype=scala
 
 " for coc.vim
 autocmd FileType json syntax match Comment +\/\/.\+$+
+
+" for Todo
+autocmd bufnewfile todo.md call append(0, '# Todo')
+autocmd bufnewfile todo.md call append(1, 'Date: ')
+autocmd bufnewfile,bufread,filewritepre todo.md exe "g/Date: */s/Date: *.*/Date: " .strftime("%a %d %b %Y")
+autocmd bufnewfile,Bufwritepre,filewritepre todo.md execute "normal Go"

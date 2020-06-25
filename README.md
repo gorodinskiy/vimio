@@ -8,9 +8,9 @@ An [article](https://dev.to/konstantin/configuring-a-perfect-editor-for-frontend
 
 In order to get all features you might want to install following packages:
 
--   [fzf](https://github.com/junegunn/fzf)
--   [ripgrep](https://github.com/BurntSushi/ripgrep)
--   [npm](https://www.npmjs.com/get-npm)
+- [fzf](https://github.com/junegunn/fzf)
+- [ripgrep](https://github.com/BurntSushi/ripgrep)
+- [npm](https://www.npmjs.com/get-npm)
 
 ## Installation
 
@@ -52,30 +52,42 @@ And «Esc+» option in iterm2:
 
 Some of shortcuts(<kbd>Leader</kbd> key is comma):
 
--   <kbd>Ctrl</kbd> + <kbd>s</kbd> saves current file
--   <kbd>Leader</kbd> + <kbd>s</kbd> in both `select` and `normal` mode initiates search and replace
--   <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line or selection above
-    or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
--   <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character or
-    selection to left or to the right
--   <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
--   <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
--   when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
--   <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
-    [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
-    for more info)
--   <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/notes/index.md`
+- <kbd>Ctrl</kbd> + <kbd>s</kbd> saves current file
+- <kbd>Leader</kbd> + <kbd>s</kbd> in both `select` and `normal` mode initiates search and replace
+- <kbd>Alt</kbd> + <kbd>Up</kbd>/<kbd>Down</kbd> moves line or selection above
+  or below current line(see [upside-down](https://github.com/gko/upside-down) for more info)
+- <kbd>Alt</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd> moves character or
+  selection to left or to the right
+- <kbd>Leader</kbd> + <kbd>n</kbd> toggles NERDTree
+- <kbd>Leader</kbd> + <kbd>m</kbd> shows current file in NERDTree
+- when in select mode <kbd>'</kbd>, <kbd>"</kbd>, <kbd>(</kbd> wraps selection accordingly
+- <kbd>y</kbd> + <kbd>m</kbd> yanks found matches(see
+  [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
+  for more info)
+
+### Taking notes and TODOs
+
+- <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/Documents/Notes/index.md`
+- :Todo opens `~/Documents/Notes/todo.md` in a vertical split and fills in current date
+
+see more info in this article: https://dev.to/konstantin/taking-notes-in-vim-revisited-558k
+you can find the code here:
+https://github.com/gko/vimio/blob/03a5385a84e0ebb2ac2a0cbf221c45460e780a50/after/plugin/shortcuts.vim#L225-L230
+
+and here
+
+https://github.com/gko/vimio/blob/03a5385a84e0ebb2ac2a0cbf221c45460e780a50/after/plugin/filetypes.vim#L28-L32
 
 ## Plugin shortcuts
 
--   [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
--   [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
--   [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
--   ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
--   [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
--   [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
--   [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
--   [vim-doge](https://github.com/kkoomen/vim-doge#gdoge_mapping)
+- [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
+- [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
+- [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
+- ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
+- [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
+- [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
+- [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
+- [vim-doge](https://github.com/kkoomen/vim-doge#gdoge_mapping)
 
 ### vim-surround
 
