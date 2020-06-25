@@ -225,6 +225,5 @@ nmap <F5> :TagbarToggle<CR>
 " open ~/Documents/notes/index.md
 nnoremap <Leader>ww :e ~/Documents/Notes/index.md<cr>
 if !exists(":Todo")
-    cabbrev todo Todo
     command Todo :vsp ~/Documents/Notes/todo.md
 endif
