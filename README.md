@@ -20,24 +20,6 @@ On unix and windows(with bash which can be installed with [git](http://msysgit.g
 curl -L https://raw.github.com/gko/vimio/master/install.sh | bash
 ```
 
-### Your config
-
-If you create `~/.vimrc.local` it will be loaded before the end of `vim-plug`.
-So you can add a custom config + vim plugins of your choice there.
-
-Example [.vimrc.local](/.vimrc.local).
-
-### Color scheme
-
-You can have a `~/.vimrc_background` file, where you keep custom colorscheme
-settings.
-
-Example can be found [here](/.vimrc_background). And you can symlink it as
-following:
-```shell
-ln -sf ~/.vim/.vimrc_background ~/
-```
-
 ### macOS
 
 In macOS terminal.app don't forget to check the «Use option as meta key»:
@@ -65,6 +47,76 @@ Some of shortcuts(<kbd>Leader</kbd> key is comma):
   [yankmatches.vim](https://github.com/yko/vimio/blob/master/after/plugin/yankmatches.vim)
   for more info)
 
+### Plugin shortcuts
+
+- [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
+- [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
+- [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
+- ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
+- [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
+- [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
+- [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
+- [vim-doge](https://github.com/kkoomen/vim-doge#gdoge_mapping)
+
+#### vim-surround
+
+For general instructions see
+[README](https://github.com/tpope/vim-surround#surroundvim)
+
+See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
+
+#### Coc.vim
+
+See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
+
+##### Language servers installation
+
+###### Typescript/Javascript
+
+https://github.com/theia-ide/typescript-language-server#installing
+
+###### Go
+
+https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation
+
+###### Rust
+
+https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
+
+you may need to install:
+
+- rustup https://github.com/rust-lang/rustup#installation
+- rust-src `rustup component add rust-src`
+
+###### Scala
+
+https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary
+
+###### PHP
+
+https://github.com/bmewburn/intelephense-docs#installation
+
+## List of all plugins and commands
+
+You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file.
+
+## Your config
+
+If you create `~/.vimrc.local` it will be loaded before the end of `vim-plug`.
+So you can add a custom config + vim plugins of your choice there.
+
+Example [.vimrc.local](/.vimrc.local).
+
+### Color scheme
+
+You can have a `~/.vimrc_background` file, where you keep custom colorscheme
+settings.
+
+Example can be found [here](/.vimrc_background). And you can symlink it as
+following:
+```shell
+ln -sf ~/.vim/.vimrc_background ~/
+```
 ### Taking notes and TODOs
 
 - <kbd>Leader</kbd> + <kbd>w</kbd> + <kbd>w</kbd> opens `~/Documents/Notes/index.md`
@@ -82,61 +134,8 @@ https://github.com/gko/vimio/blob/de73a9272c29acc6f2ce6d5be7f24cbe113a85b4/after
 
 For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plugin is installed
 
-## Plugin shortcuts
-
-- [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
-- [vim-emmet](https://github.com/mattn/emmet-vim#quick-tutorial)
-- [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage)
-- ~~[ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim#basic-usage)~~ (see [this PR](https://github.com/gko/vimio/pull/17))
-- [vim-gh-line](https://github.com/ruanyl/vim-gh-line#how-to-use)
-- [vim-jsdoc](https://github.com/heavenshell/vim-jsdoc#usage)
-- [md-img-paste.vim](https://github.com/ferrine/md-img-paste.vim#usage)
-- [vim-doge](https://github.com/kkoomen/vim-doge#gdoge_mapping)
-
-### vim-surround
-
-For general instructions see
-[README](https://github.com/tpope/vim-surround#surroundvim)
-
-See [this issue](https://github.com/tpope/vim-surround/issues/220) for visual mode
-
-### Coc.vim
-
-See [example vim configuration](https://github.com/neoclide/coc.nvim#example-vim-configuration) for shortcuts.
-
-#### Language servers installation
-
-##### Typescript/Javascript
-
-https://github.com/theia-ide/typescript-language-server#installing
-
-##### Go
-
-https://github.com/golang/tools/blob/master/gopls/doc/user.md#installation
-
-##### Rust
-
-https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
-
-you may need to install:
-
-- rustup https://github.com/rust-lang/rustup#installation
-- rust-src `rustup component add rust-src`
-
-##### Scala
-
-https://scalameta.org/metals/docs/editors/vim.html#generating-metals-binary
-
-##### PHP
-
-https://github.com/bmewburn/intelephense-docs#installation
-
-## List of plugins and commands
-
-You can find the list of plugins as well as commands that they provide in the [init.vim](https://github.com/gko/vimio/blob/master/init.vim) file.
-
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2019 Konstantin Gorodinskiy
+Copyright (c) 2012-2020 Konstantin Gorodinskiy
