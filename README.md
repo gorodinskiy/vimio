@@ -78,6 +78,10 @@ and here
 
 https://github.com/gko/vimio/blob/03a5385a84e0ebb2ac2a0cbf221c45460e780a50/after/plugin/filetypes.vim#L28-L32
 
+#### Checkboxes
+
+For checkboxes [vim-checkbox](https://github.com/jkramer/vim-checkbox#usage) plugin is installed
+
 ## Plugin shortcuts
 
 - [vim-bookmarks](https://github.com/MattesGroeger/vim-bookmarks#usage)
@@ -116,8 +120,8 @@ https://github.com/rust-analyzer/rust-analyzer#language-server-quick-start
 
 you may need to install:
 
--   rustup https://github.com/rust-lang/rustup#installation
--   rust-src `rustup component add rust-src`
+- rustup https://github.com/rust-lang/rustup#installation
+- rust-src `rustup component add rust-src`
 
 ##### Scala
 
