@@ -380,6 +380,10 @@ call plug#begin()
     Plug 'reasonml-editor/vim-reason-plus'
 " }}}
 
+" Swift {{{
+    Plug 'keith/swift.vim', { 'for': 'swift' }
+" }}}
+
 " Terraform {{{
     Plug 'hashivim/vim-terraform'
     Plug 'juliosueiras/vim-terraform-completion'
