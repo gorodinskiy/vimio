@@ -47,6 +47,12 @@
                 }
             }
         },
+        "sourcekit": {
+            // xcrun --toolchain swift --find sourcekit-lsp
+            "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp",
+            "filetypes": ["swift"],
+            "rootPatterns": ["Podfile", ".git", ".hg"]
+        },
         "golang": {
             "command": "gopls",
             "rootPatterns": ["go.mod", ".git/", ".hg/"],
