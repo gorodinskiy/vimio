@@ -197,6 +197,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'sainnhe/edge'
     Plug 'Lokaltog/vim-monotone'
     Plug 'arzg/vim-colors-xcode'
     Plug 'rakr/vim-one'
