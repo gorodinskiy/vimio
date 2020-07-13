@@ -28,12 +28,12 @@ if has('nvim') && exists("*nvim_open_win")
 
         let height = 10
         if &lines > 10
-            let height = float2nr(&lines * 0.4) " 40%
+            let height = float2nr(&lines * 0.8) " 80%
         endif
 
         let width = 80
         if &columns > 110
-            let width = float2nr(&columns * 0.7) " 70%
+            let width = float2nr(&columns * 0.8) " 80%
         endif
 
         let horizontal = float2nr((&columns - width) / 2)
