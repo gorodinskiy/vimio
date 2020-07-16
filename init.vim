@@ -59,9 +59,10 @@ call plug#begin()
     Plug 'honza/vim-snippets'
     Plug 'editorconfig/editorconfig-vim'
 
-    if has('nvim') && has('nvim-0.3.0') && (has('python') || has('python3'))
-        Plug 'TaDaa/vimade'
-    endif
+    " slows things down considerably
+    " if has('nvim') && has('nvim-0.3.0') && (has('python') || has('python3'))
+    " Plug 'TaDaa/vimade'
+    " endif
 
     Plug 'janko/vim-test', {
             \ 'for': [
@@ -123,17 +124,17 @@ call plug#begin()
             \ ] }
 
     Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme', 'wast', 'wat'] }
-    Plug 'dense-analysis/ale', {
-            \ 'for': [
-                \ 'javascript',
-                \ 'typescript',
-                \ 'vue',
-                \ 'css',
-                \ 'scss',
-                \ 'go',
-                \ 'rust',
-                \ 'scala'
-            \ ] }
+    " Plug 'dense-analysis/ale', {
+            " \ 'for': [
+                " \ 'javascript',
+                " \ 'typescript',
+                " \ 'vue',
+                " \ 'css',
+                " \ 'scss',
+                " \ 'go',
+                " \ 'rust',
+                " \ 'scala'
+            " \ ] }
 
     Plug 'itchyny/lightline.vim'
     " Plug 'vim-airline/vim-airline'
