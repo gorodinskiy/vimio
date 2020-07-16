@@ -122,7 +122,7 @@ call plug#begin()
                 \ 'Marks'
             \ ] }
 
-    Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme'] }
+    Plug 'kovisoft/paredit', { 'for': ['clojure', 'scheme', 'wast', 'wat'] }
     Plug 'dense-analysis/ale', {
             \ 'for': [
                 \ 'javascript',
@@ -147,7 +147,7 @@ call plug#begin()
 
     Plug 'wsdjeg/vim-fetch'
     Plug 'gko/upside-down'
-    Plug 'kristijanhusak/vim-carbon-now-sh'
+    Plug 'kristijanhusak/vim-carbon-now-sh', { 'on': 'CarbonNowSh' }
 " }}}
 
 " Git stuff {{{
@@ -190,7 +190,6 @@ call plug#begin()
         Plug 'neoclide/coc.nvim', { 'branch': 'release' }
         Plug 'neoclide/coc-java', {'do': 'npm i'}
         Plug 'neoclide/coc-snippets', {'do': 'npm i'}
-        " Plug 'neoclide/coc-json', {'do': 'npm i'}
 
         let g:UltiSnipsExpandTrigger="<nop>"
     endif
@@ -378,7 +377,7 @@ call plug#begin()
 " }}}
 
 " ReasonML {{{
-    Plug 'reasonml-editor/vim-reason-plus'
+" Plug 'reasonml-editor/vim-reason-plus'
 " }}}
 
 " Swift {{{
@@ -386,8 +385,8 @@ call plug#begin()
 " }}}
 
 " Terraform {{{
-    Plug 'hashivim/vim-terraform'
-    Plug 'juliosueiras/vim-terraform-completion'
+    Plug 'hashivim/vim-terraform', { 'for': 'tf' }
+    Plug 'juliosueiras/vim-terraform-completion', { 'for': 'tf' }
 " }}}
 
 " Your part of config {{{
