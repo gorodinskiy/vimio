@@ -3,6 +3,10 @@
     "diagnostic.warningSign": "●",
     "eslint.options": { "enable": false },
     "languageserver": {
+        "lua": {
+            "command": "lua-lsp",
+            "filetypes": ["lua"]
+        },
         "rust": {
             "command": "ra_lsp_server",
             "filetypes": ["rust"],
