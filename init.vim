@@ -149,6 +149,10 @@ call plug#begin()
     Plug 'wsdjeg/vim-fetch'
     Plug 'gko/upside-down'
     Plug 'kristijanhusak/vim-carbon-now-sh', { 'on': 'CarbonNowSh' }
+
+    if has('python3')
+        Plug 'SirVer/ultisnips'
+    endif
 " }}}
 
 " Git stuff {{{
@@ -182,11 +186,7 @@ call plug#begin()
     Plug 'airblade/vim-gitgutter'
 " }}}
 
-" Coc and Ultisnips {{{
-    if has('python3')
-        Plug 'SirVer/ultisnips'
-    endif
-
+" LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lsp'
     else
