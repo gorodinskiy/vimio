@@ -187,16 +187,21 @@ call plug#begin()
         Plug 'SirVer/ultisnips'
     endif
 
-    if executable('npm')
-        Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-        Plug 'neoclide/coc-java', {'do': 'npm i'}
-        Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+    if has('nvim') && has('nvim-0.5.0')
+        Plug 'neovim/nvim-lsp'
+    else
+        if executable('npm')
+            Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+            Plug 'neoclide/coc-java', {'do': 'npm i'}
+            Plug 'neoclide/coc-snippets', {'do': 'npm i'}
 
-        let g:UltiSnipsExpandTrigger="<nop>"
+            let g:UltiSnipsExpandTrigger="<nop>"
+        endif
     endif
 " }}}
 
 " Colorschemes {{{
+    Plug 'rakr/vim-two-firewatch'
     Plug 'sainnhe/edge'
     Plug 'Lokaltog/vim-monotone'
     Plug 'arzg/vim-colors-xcode'
