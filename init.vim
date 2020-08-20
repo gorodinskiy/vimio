@@ -191,6 +191,7 @@ call plug#begin()
         Plug 'neovim/nvim-lsp'
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'Shougo/deoplete-lsp'
+        Plug 'fszymanski/deoplete-emoji'
         let g:deoplete#enable_at_startup = 1
     else
         if executable('npm')
@@ -239,6 +240,7 @@ call plug#begin()
     Plug 'nightsense/stellarized'
     Plug 'nightsense/cosmic_latte'
     Plug 'cormacrelf/vim-colors-github'
+    Plug 'romgrk/github-light.vim'
 " }}}
 
 " HTML/HAML {{{
