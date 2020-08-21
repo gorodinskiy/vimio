@@ -1,4 +1,4 @@
 " requires specific font
-Plug 'ryanoasis/vim-devicons', { 'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFind'] }
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'ryanoasis/vim-devicons', { 'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFind'] }
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'camspiers/lens.vim'
