@@ -19,12 +19,18 @@ lua <<EOF
     require'nvim_lsp'.terraformls.setup{}
     -- require'nvim_lsp'.vimls.setup{}
 EOF
-        execute 'edit!'
+
+        if bufname("%") != ""
+            execute 'edit!'
+        endif
     endfunction
 
     function! LspDisable()
         lua vim.lsp.stop_client(vim.lsp.get_active_clients())
-        execute 'edit!'
+
+        if bufname("%") != ""
+            execute 'edit!'
+        endif
     endfunction
 
     command! LspEnable :call LspEnable()
