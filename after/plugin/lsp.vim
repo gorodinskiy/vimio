@@ -1,4 +1,5 @@
 if has('nvim') && has('nvim-0.5.0')
+    function! LspEnable()
 lua <<EOF
     require'nvim_lsp'.gopls.setup{}
     require'nvim_lsp'.tsserver.setup{}
@@ -18,6 +19,18 @@ lua <<EOF
     require'nvim_lsp'.terraformls.setup{}
     -- require'nvim_lsp'.vimls.setup{}
 EOF
+        execute 'edit!'
+    endfunction
+
+    function! LspDisable()
+        lua vim.lsp.stop_client(vim.lsp.get_active_clients())
+        execute 'edit!'
+    endfunction
+
+    command! LspEnable :call LspEnable()
+    command! LspDisable :call LspDisable()
+
+    call LspEnable()
 
     " autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
