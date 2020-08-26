@@ -8,4 +8,7 @@ let g:netrw_winsize = 27
 " command! ExploreFind execute 'Explore' expand("%:p:h")
 " | normal n
 
-autocmd FileType netrw setl bufhidden=delete
+augroup netrw_delete_hidden
+    autocmd!
+    autocmd FileType netrw setl bufhidden=delete
+augroup end

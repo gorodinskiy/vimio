@@ -128,7 +128,10 @@ nmap # #zz
 nmap g* g*zz
 nmap g# g#zz
 "autocmd CursorMoved * set nohlsearch
-autocmd cursorhold * set nohlsearch
+augroup cursorhold_no_hlsearch
+    autocmd!
+    autocmd cursorhold * set nohlsearch
+augroup end
 noremap / :set hlsearch<cr>/
 noremap ? :set hlsearch<cr>?
 

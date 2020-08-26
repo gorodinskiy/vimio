@@ -21,8 +21,11 @@ function! BookmarkUnmapKeys()
     unmap mx
 endfunction
 
-autocmd BufEnter * :call BookmarkMapKeys()
-autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
+augroup handle_nerd_tree_keys_with_bookmark
+    autocmd!
+    autocmd BufEnter * :call BookmarkMapKeys()
+    autocmd BufEnter NERD_tree_* :call BookmarkUnmapKeys()
+augroup end
 
 " to disable bookmark keys in CtrlP
 let g:ctrlp_buffer_func = {
