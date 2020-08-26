@@ -15,6 +15,7 @@ call plug#begin()
     Plug 'jiangmiao/auto-pairs'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'gcmt/taboo.vim'
+    Plug 'chaoren/vim-wordmotion'
 
     Plug 'xolox/vim-easytags', {
             \ 'on': [
@@ -213,7 +214,7 @@ call plug#begin()
     Plug 'sainnhe/sonokai'
     Plug 'AlxHnr/clear_colors'
     Plug 'w0ng/vim-hybrid'
-    Plug 'kaicataldo/material.vim'
+    Plug 'kaicataldo/material.vim', { 'branch': 'main' }
     Plug 'cocopon/iceberg.vim'
     Plug 'fxn/vim-monochrome'
     Plug 'arcticicestudio/nord-vim'
