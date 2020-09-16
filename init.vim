@@ -191,10 +191,8 @@ call plug#begin()
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lsp'
         Plug 'nvim-lua/diagnostic-nvim'
-        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-        Plug 'Shougo/deoplete-lsp'
-        Plug 'fszymanski/deoplete-emoji'
-        let g:deoplete#enable_at_startup = 1
+        Plug 'nvim-lua/completion-nvim'
+        Plug 'steelsojka/completion-buffers'
     else
         if executable('npm')
             Plug 'neoclide/coc.nvim', { 'branch': 'release' }
