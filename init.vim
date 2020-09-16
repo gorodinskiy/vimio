@@ -137,9 +137,9 @@ call plug#begin()
                 " \ 'scala'
             " \ ] }
 
-    Plug 'itchyny/lightline.vim'
-    " Plug 'vim-airline/vim-airline'
-    " Plug 'vim-airline/vim-airline-themes'
+    " Plug 'itchyny/lightline.vim'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
 
     Plug 'sedm0784/vim-you-autocorrect', {
             \ 'on': [
@@ -216,6 +216,7 @@ call plug#begin()
     Plug 'AlxHnr/clear_colors'
     Plug 'w0ng/vim-hybrid'
     Plug 'kaicataldo/material.vim', { 'branch': 'main' }
+    Plug 'drewtempelmeyer/palenight.vim'
     Plug 'cocopon/iceberg.vim'
     Plug 'fxn/vim-monochrome'
     Plug 'arcticicestudio/nord-vim'

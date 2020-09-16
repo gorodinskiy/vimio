@@ -18,12 +18,12 @@ set background=dark
 " colorscheme edge
 
 " Material {{{
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'palenight'
+" let g:material_terminal_italics = 1
+" let g:material_theme_style = 'palenight'
 
-let g:lightline = { 'colorscheme': 'material_vim' }
-colorscheme material
-let g:airline_theme = 'material'
+" let g:lightline = { 'colorscheme': 'material_vim' }
+" colorscheme material
+" let g:airline_theme = 'material'
 " }}}
 
 " Github {{{
@@ -31,6 +31,11 @@ let g:airline_theme = 'material'
 " let g:lightline#colorscheme#github_light#faithful = 0
 " colorscheme github-light
 " highlight Pmenu guibg=#e0e0e0
+" }}}
+
+" xcode {{{
+colorscheme xcodelighthc
+let g:airline_theme = 'xcodelighthc'
 " }}}
 
 if has('nvim')
