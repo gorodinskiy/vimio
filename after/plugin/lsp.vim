@@ -1,23 +1,34 @@
 if has('nvim') && has('nvim-0.5.0')
+
+" diagnotics {{{
+    let g:diagnostic_insert_delay = 1
+    let g:diagnostic_enable_virtual_text = 0
+
+    augroup show-line-diagnostics
+        autocmd!
+        autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+    augroup end
+" }}}
+
     function! LspEnable()
 lua <<EOF
-    require'nvim_lsp'.gopls.setup{}
-    require'nvim_lsp'.tsserver.setup{}
-    require'nvim_lsp'.intelephense.setup{}
-    require'nvim_lsp'.pyls.setup{}
-    require'nvim_lsp'.html.setup{}
-    require'nvim_lsp'.cssls.setup{}
-    require'nvim_lsp'.jsonls.setup{}
-    require'nvim_lsp'.sumneko_lua.setup{}
-    require'nvim_lsp'.rls.setup{}
-    require'nvim_lsp'.metals.setup{}
-    require'nvim_lsp'.ccls.setup{}
-    require'nvim_lsp'.kotlin_language_server.setup{}
-    require'nvim_lsp'.sourcekit.setup{}
-    require'nvim_lsp'.ocamlls.setup{}
-    require'nvim_lsp'.dartls.setup{}
-    require'nvim_lsp'.terraformls.setup{}
-    -- require'nvim_lsp'.vimls.setup{}
+    require'nvim_lsp'.gopls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.tsserver.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.intelephense.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.html.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.cssls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.jsonls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.sumneko_lua.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.rls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.metals.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.ccls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.kotlin_language_server.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.sourcekit.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.ocamlls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.dartls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.terraformls.setup{on_attach=require'diagnostic'.on_attach}
+    -- require'nvim_lsp'.vimls.setup{on_attach=require'diagnostic'.on_attach}
 EOF
 
         if bufname("%") != ""
@@ -40,7 +51,6 @@ EOF
 
     " autocmd Filetype * setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
-    nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
     nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
     nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
     nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
@@ -49,8 +59,12 @@ EOF
     nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
     nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
     nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
+    nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
     nnoremap <leader>rn    <cmd>lua vim.lsp.buf.rename()<CR>
     nnoremap <leader>ac    <cmd>lua vim.lsp.buf.code_action()<CR>
+    " Use `[g` and `]g` to navigate diagnostics
+    nmap <silent> [g :PrevDiagnostic<CR>
+    nmap <silent> ]g :NextDiagnostic<CR>
 else
     if !executable('npm') || !exists("g:coc_enabled")
         finish

@@ -190,6 +190,7 @@ call plug#begin()
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lsp'
+        Plug 'nvim-lua/diagnostic-nvim'
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'Shougo/deoplete-lsp'
         Plug 'fszymanski/deoplete-emoji'
