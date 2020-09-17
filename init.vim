@@ -12,10 +12,12 @@ call plug#begin()
     Plug 'MattesGroeger/vim-bookmarks'
     " Plug 'Shougo/vimproc.vim', { 'do': 'make' }
     Plug 'xolox/vim-misc'
-    Plug 'jiangmiao/auto-pairs'
+    " FIXME when deleting a multiline comment it deletes whitespace after
+    " this comment
+    " Plug 'jiangmiao/auto-pairs'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'gcmt/taboo.vim'
-    Plug 'chaoren/vim-wordmotion'
+    " Plug 'chaoren/vim-wordmotion'
 
     Plug 'xolox/vim-easytags', {
             \ 'on': [
