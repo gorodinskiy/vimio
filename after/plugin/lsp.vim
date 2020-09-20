@@ -9,6 +9,11 @@ if has('nvim') && has('nvim-0.5.0')
         autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
     augroup end
 " }}}
+"
+augroup completion-in-gitcommit
+    autocmd!
+    autocmd FileType gitcommit lua require'completion'.on_attach()
+augroup end
 
 " completion {{{
     let g:completion_chain_complete_list = [
