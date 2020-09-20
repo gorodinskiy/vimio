@@ -34,8 +34,14 @@ set background=dark
 " }}}
 
 " xcode {{{
-colorscheme xcodelighthc
-let g:airline_theme = 'xcodelighthc'
+" colorscheme xcodelighthc
+" let g:airline_theme = 'xcodelighthc'
+" }}}
+
+" onehalf {{{
+let g:lightline = { 'colorscheme': 'onehalflight' }
+colorscheme onehalflight
+let g:airline_theme='onehalflight'
 " }}}
 
 if has('nvim')

@@ -207,11 +207,13 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'jaimebuelta/jaime-vim-colorscheme'
     Plug 'rakr/vim-two-firewatch'
     Plug 'sainnhe/edge'
     Plug 'Lokaltog/vim-monotone'
     Plug 'arzg/vim-colors-xcode'
     Plug 'rakr/vim-one'
+    Plug 'sonph/onehalf', {'rtp': 'vim/'}
     Plug 'sainnhe/sonokai'
     Plug 'AlxHnr/clear_colors'
     Plug 'w0ng/vim-hybrid'
