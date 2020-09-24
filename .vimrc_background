@@ -1,9 +1,15 @@
 set background=dark
 
+" gruvbox {{{
 " let g:gruvbox_contrast_dark="soft"
 " let g:gruvbox_contrast_light="soft"
-" hi Visual cterm=none gui=none ctermbg=19
-" colorscheme gruvbox
+let g:lightline = { 'colorscheme': 'gruvbox' }
+colorscheme gruvbox
+let g:airline_theme = 'gruvbox'
+hi Visual cterm=none gui=none ctermbg=19
+hi Normal ctermbg=none guibg=none
+hi SignColumn ctermbg=none guibg=none
+" }}}
 
 " let g:sonokai_style = 'andromeda'
 " let g:sonokai_enable_italic = 1
@@ -39,9 +45,10 @@ set background=dark
 " }}}
 
 " onehalf {{{
-let g:lightline = { 'colorscheme': 'onehalflight' }
-colorscheme onehalflight
-let g:airline_theme='onehalflight'
+" set background=light
+" let g:lightline = { 'colorscheme': 'onehalflight' }
+" colorscheme onehalflight
+" let g:airline_theme='onehalflight'
 " }}}
 
 if has('nvim')
