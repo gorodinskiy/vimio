@@ -15,50 +15,25 @@ augroup completion-in-gitcommit
     autocmd FileType gitcommit lua require'completion'.on_attach()
 augroup end
 
-" completion {{{
-    let g:completion_chain_complete_list = [
-        \{'complete_items': ['snippet', 'lsp', 'buffers']},
-        \{'mode': '<c-p>'},
-        \{'mode': '<c-n>'}
-    \]
-
-    " Use <Tab> and <S-Tab> to navigate through popup menu
-    inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-    inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-    " Set completeopt to have a better completion experience
-    set completeopt=menuone,noinsert,noselect
-
-    " Avoid showing message extra message when using completion
-    set shortmess+=c
-
-    let g:completion_enable_snippet = 'UltiSnips'
-" }}}
-
     function! LspEnable()
 lua <<EOF
-    function attachDiagnosticAndCompletion ()
-        require'diagnostic'.on_attach()
-        require'completion'.on_attach()
-    end
-
-    require'nvim_lsp'.gopls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.tsserver.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.intelephense.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.pyls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.html.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.cssls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.jsonls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.sumneko_lua.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.rls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.metals.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.ccls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.kotlin_language_server.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.sourcekit.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.ocamlls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.dartls.setup{on_attach=attachDiagnosticAndCompletion}
-    require'nvim_lsp'.terraformls.setup{on_attach=attachDiagnosticAndCompletion}
-    -- require'nvim_lsp'.vimls.setup{on_attach=attachDiagnosticAndCompletion}
+    require'nvim_lsp'.gopls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.tsserver.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.intelephense.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.html.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.cssls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.jsonls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.sumneko_lua.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.rls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.metals.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.ccls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.kotlin_language_server.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.sourcekit.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.ocamlls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.dartls.setup{on_attach=require'diagnostic'.on_attach}
+    require'nvim_lsp'.terraformls.setup{on_attach=require'diagnostic'.on_attach}
+    -- require'nvim_lsp'.vimls.setup{on_attach=require'diagnostic'.on_attach}
 EOF
 
         if bufname("%") != ""
