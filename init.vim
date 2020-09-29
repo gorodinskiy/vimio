@@ -60,7 +60,6 @@ call plug#begin()
     Plug 'mattn/emmet-vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-    Plug 'honza/vim-snippets'
     Plug 'editorconfig/editorconfig-vim'
 
     " slows things down considerably
@@ -157,6 +156,7 @@ call plug#begin()
 
     if has('python3')
         Plug 'SirVer/ultisnips'
+        Plug 'honza/vim-snippets'
     endif
 " }}}
 
@@ -202,8 +202,8 @@ call plug#begin()
     else
         if executable('npm')
             Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-            Plug 'neoclide/coc-java', {'do': 'npm i'}
             Plug 'neoclide/coc-snippets', {'do': 'npm i'}
+            Plug 'neoclide/coc-java', {'do': 'npm i'}
 
             let g:UltiSnipsExpandTrigger="<nop>"
         endif
