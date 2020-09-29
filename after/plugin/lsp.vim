@@ -1,3 +1,5 @@
+" deoplete config df70b949d6a43792ada5352612b2c9cecbc449fb
+" beware of this issue https://github.com/neovim/neovim/issues/11867
 if has('nvim') && has('nvim-0.5.0')
 
 " diagnotics {{{
