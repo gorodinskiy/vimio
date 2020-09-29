@@ -2,6 +2,10 @@
     "diagnostic.errorSign": "●",
     "diagnostic.warningSign": "●",
     "eslint.options": { "enable": false },
+    "snippets.extends": {
+        "cpp": ["c"],
+        "typescriptreact": ["javascript"]
+    },
     "languageserver": {
         "lua": {
             "command": "lua-lsp",
