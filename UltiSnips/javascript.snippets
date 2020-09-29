@@ -1,0 +1,9 @@
+priority -100
+
+snippet log "console.log" b
+console.log('variable «${0:${VISUAL:variable}}» value is:', ${0:${VISUAL:variable}});
+endsnippet
+
+snippet ifdef "if variable is defined" b
+if (${1:${VISUAL:variable}}) ${2}
+endsnippet
