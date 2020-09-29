@@ -90,10 +90,10 @@ map Ю >
 
 
 " select all
-nnoremap <Leader>a gg0vGG$
-vnoremap <Leader>a gg0vGG$
-nnoremap <M-a> gg0vGG$
-vnoremap <M-a> gg0vGG$
+" nnoremap <Leader>a gg0vGG$
+" vnoremap <Leader>a gg0vGG$
+" nnoremap <M-a> gg0vGG$
+" vnoremap <M-a> gg0vGG$
 
 " < >
 vnoremap < <gv
