@@ -141,5 +141,6 @@
             }
         }
     },
-    "java.errors.incompleteClasspath.severity": "ignore"
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "coc.source.emoji.filetypes": ["markdown", "gitcommit"]
 }
