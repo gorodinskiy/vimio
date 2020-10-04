@@ -212,6 +212,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'kamwitsta/flatwhite-vim'
     Plug 'jaimebuelta/jaime-vim-colorscheme'
     Plug 'rakr/vim-two-firewatch'
     Plug 'sainnhe/edge'
