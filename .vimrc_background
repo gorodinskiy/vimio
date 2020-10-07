@@ -8,7 +8,7 @@ colorscheme gruvbox
 let g:airline_theme = 'gruvbox'
 hi Visual cterm=none gui=none ctermbg=19
 hi Normal ctermbg=none guibg=none
-hi SignColumn ctermbg=none guibg=none
+" hi SignColumn ctermbg=none guibg=none
 " }}}
 
 " let g:sonokai_style = 'andromeda'

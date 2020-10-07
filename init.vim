@@ -96,7 +96,7 @@ call plug#begin()
 
     " https://github.com/szw/vim-g/pull/19
     Plug 'gko/vim-g'
-    Plug 'airblade/vim-rooter'
+    " Plug 'airblade/vim-rooter'
 
     " if has('patch-8.1.2114') || has('nvim-0.4')
     " Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
