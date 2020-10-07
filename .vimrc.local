@@ -2,3 +2,7 @@
 " Plug 'ryanoasis/vim-devicons', { 'on': ['NERDTreeToggle', 'NERDTree', 'NERDTreeFind'] }
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Plug 'camspiers/lens.vim'
+
+" default value changed in 2.0.0
+" https://prettier.io/docs/en/options.html#arrow-function-parentheses
+let g:prettier#config#arrow_parens="avoid"
