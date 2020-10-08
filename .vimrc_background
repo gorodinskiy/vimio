@@ -3,11 +3,11 @@ set background=dark
 " gruvbox {{{
 " let g:gruvbox_contrast_dark="soft"
 " let g:gruvbox_contrast_light="soft"
-let g:lightline = { 'colorscheme': 'gruvbox' }
-colorscheme gruvbox
-let g:airline_theme = 'gruvbox'
-hi Visual cterm=none gui=none ctermbg=19
-hi Normal ctermbg=none guibg=none
+" let g:lightline = { 'colorscheme': 'gruvbox' }
+" colorscheme gruvbox
+" let g:airline_theme = 'gruvbox'
+" hi Visual cterm=none gui=none ctermbg=19
+" hi Normal ctermbg=none guibg=none
 " hi SignColumn ctermbg=none guibg=none
 " }}}
 
@@ -45,10 +45,10 @@ hi Normal ctermbg=none guibg=none
 " }}}
 
 " onehalf {{{
-" set background=light
-" let g:lightline = { 'colorscheme': 'onehalflight' }
-" colorscheme onehalflight
-" let g:airline_theme='onehalflight'
+set background=light
+let g:lightline = { 'colorscheme': 'onehalflight' }
+colorscheme onehalflight
+let g:airline_theme='onehalflight'
 " }}}
 
 if has('nvim')
