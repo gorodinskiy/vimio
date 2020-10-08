@@ -11,31 +11,45 @@ if has('nvim') && has('nvim-0.5.0')
         autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
     augroup end
 " }}}
-"
-augroup completion-in-gitcommit
-    autocmd!
-    autocmd FileType gitcommit lua require'completion'.on_attach()
-augroup end
 
     function! LspEnable()
 lua <<EOF
-    require'nvim_lsp'.gopls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.tsserver.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.intelephense.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.pyls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.html.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.cssls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.jsonls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.sumneko_lua.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.rls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.metals.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.ccls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.kotlin_language_server.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.sourcekit.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.ocamlls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.dartls.setup{on_attach=require'diagnostic'.on_attach}
-    require'nvim_lsp'.terraformls.setup{on_attach=require'diagnostic'.on_attach}
-    -- require'nvim_lsp'.vimls.setup{on_attach=require'diagnostic'.on_attach}
+    local has_lsp, nvim_lsp = pcall(require, 'nvim_lsp')
+    local has_diagnostic, diagnostic = pcall(require, 'diagnostic')
+
+    if not has_lsp then
+        return
+    end
+
+    local on_attach = function()
+        if has_diagnostic then
+            diagnostic.on_attach()
+        end
+    end
+
+    local servers = {
+        'gopls',
+        'tsserver',
+        'intelephense',
+        'pyls',
+        'html',
+        'cssls',
+        'jsonls',
+        'sumneko_lua',
+        'rls',
+        'metals',
+        'ccls',
+        'kotlin_language_server',
+        'sourcekit',
+        'ocamlls',
+        'dartls',
+        'terraformls',
+        -- 'vimls',
+    }
+
+    for _, server in ipairs(servers) do
+        nvim_lsp[server].setup({ on_attach = on_attach })
+    end
 EOF
 
         if bufname("%") != ""
