@@ -10,6 +10,10 @@ set ttimeout
 set timeoutlen=300
 set ttimeoutlen=50
 
+"cursor
+set guicursor=n-v-c:hor15-Cursor-blinkon1000-blinkoff1000
+set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
+
 " to keep cursor in the center of the screen (almost identical to 'zz')
 " set scrolloff=50
 

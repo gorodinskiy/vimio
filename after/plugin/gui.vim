@@ -31,8 +31,5 @@ if has("gui_running")
     set guioptions+=LIRlb
     set guioptions-=LIRlb
 
-    "cursor
-    set guicursor=n-v-c:hor15-Cursor-blinkon1000-blinkoff1000
-    set guicursor+=i:ver5-Cursor-blinkon1000-blinkoff1000
     "set cursorline
 endif
