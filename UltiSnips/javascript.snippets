@@ -7,3 +7,19 @@ endsnippet
 snippet ifdef "if variable is defined" b
 if (${1:${VISUAL:variable}}) ${2}
 endsnippet
+
+snippet expect "expect" b
+expect(${0:${VISUAL:variable}});
+endsnippet
+
+snippet describe "describe" b
+describe("${1}", () => {
+	${2}
+});
+endsnippet
+
+snippet it "it" b
+it("${1}", () => {
+	${2:${VISUAL:expect()}}
+});
+endsnippet
