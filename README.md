@@ -1,6 +1,6 @@
 # Vim Settings
 
-![screenshot](https://raw.github.com/gko/vimio/master/screenshot.png)
+![screenshot](/screenshot.png)
 
 An [article](https://dev.to/konstantin/configuring-a-perfect-editor-for-frontend-development-1pe5) describing key features of this config.
 
