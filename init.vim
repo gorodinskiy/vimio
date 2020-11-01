@@ -1,4 +1,7 @@
 " Konstantin Gorodinskiy(mail[at]konstantin.io)
+if exists('g:vscode')
+	finish
+endif
 
 set nocompatible
 filetype plugin on
@@ -212,6 +215,13 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'sainnhe/forest-night'
+    Plug 'noahfrederick/vim-hemisu'
+    Plug 'franbach/miramare'
+    Plug 'Rigellute/rigel'
+    Plug 'jonathanfilip/vim-lucius'
+    Plug 'jnurmine/Zenburn'
+    Plug 'equt/paper.vim'
     Plug 'kamwitsta/flatwhite-vim'
     Plug 'jaimebuelta/jaime-vim-colorscheme'
     Plug 'rakr/vim-two-firewatch'

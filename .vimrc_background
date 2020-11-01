@@ -3,6 +3,7 @@ set background=dark
 " gruvbox {{{
 " let g:gruvbox_contrast_dark="soft"
 " let g:gruvbox_contrast_light="soft"
+
 " let g:lightline = { 'colorscheme': 'gruvbox' }
 " colorscheme gruvbox
 " let g:airline_theme = 'gruvbox'
@@ -32,11 +33,21 @@ set background=dark
 " let g:airline_theme = 'material'
 " }}}
 
+" Palenight {{{
+" let g:lightline = { 'colorscheme': 'palenight' }
+
+" set background=dark
+" colorscheme palenight
+
+" let g:airline_theme = "palenight"
+" }}}
+
 " Github {{{
 " let g:lightline = { 'colorscheme': 'github_light' }
 " let g:lightline#colorscheme#github_light#faithful = 0
 " colorscheme github-light
 " highlight Pmenu guibg=#e0e0e0
+" let g:airline_theme = 'xcodelighthc'
 " }}}
 
 " xcode {{{
@@ -45,10 +56,30 @@ set background=dark
 " }}}
 
 " onehalf {{{
-set background=light
-let g:lightline = { 'colorscheme': 'onehalflight' }
-colorscheme onehalflight
-let g:airline_theme='onehalflight'
+" set background=light
+" " let g:lightline = { 'colorscheme': 'onehalflight' }
+" colorscheme onehalflight
+" let g:airline_theme='onehalflight'
+" }}}
+
+" miramare {{{
+" the configuration options should be placed before `colorscheme miramare`
+" let g:miramare_enable_italic = 1
+" let g:miramare_disable_italic_comment = 1
+
+" let g:lightline = { 'colorscheme': 'miramare' }
+" colorscheme miramare
+" let g:airline_theme = 'miramare'
+" }}}
+
+" rigel {{{
+" let g:lightline = { 'colorscheme': 'rigel' }
+" colorscheme rigel
+" let g:airline_theme='rigel'
+" }}}
+
+" forest night {{{
+colorscheme forest-night
 " }}}
 
 if has('nvim')
