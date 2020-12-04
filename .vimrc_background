@@ -1,4 +1,4 @@
-set background=dark
+set background=light
 
 " gruvbox {{{
 " let g:gruvbox_contrast_dark="soft"
@@ -19,7 +19,9 @@ set background=dark
 " colorscheme sonokai
 
 " colorscheme nord
+" let g:lightline = { 'colorscheme': 'iceberg' }
 " colorscheme iceberg
+" let g:airline_theme = 'iceberg'
 
 " let g:lightline = { 'colorscheme': 'edge' }
 " colorscheme edge
@@ -43,16 +45,14 @@ set background=dark
 " }}}
 
 " Github {{{
-" let g:lightline = { 'colorscheme': 'github_light' }
-" let g:lightline#colorscheme#github_light#faithful = 0
-" colorscheme github-light
-" highlight Pmenu guibg=#e0e0e0
-" let g:airline_theme = 'xcodelighthc'
+let g:github_colors_soft = 1
+let g:lightline = { 'colorscheme': 'github' }
+colorscheme github
 " }}}
 
 " xcode {{{
-" colorscheme xcodelighthc
-" let g:airline_theme = 'xcodelighthc'
+" colorscheme xcodelight
+" let g:airline_theme = 'xcodelight'
 " }}}
 
 " onehalf {{{
@@ -79,7 +79,7 @@ set background=dark
 " }}}
 
 " forest night {{{
-colorscheme forest-night
+" colorscheme forest-night
 " }}}
 
 if has('nvim')
