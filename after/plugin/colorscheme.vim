@@ -36,6 +36,7 @@ try
             exec "hi Statement ctermfg=" . g:base16_cterm0E
         endif
     else
+        let g:github_colors_soft = 1
         let g:lightline = { 'colorscheme': 'github' }
         colorscheme github
         let g:airline_theme='github'
