@@ -87,7 +87,7 @@ call plug#begin()
                 \ 'TestVisit'
             \ ] }
 
-    Plug 'jpalardy/vim-slime'
+    " Plug 'jpalardy/vim-slime'
 
     Plug 'tpope/vim-surround'
     Plug 'pbrisbin/vim-mkdir'
