@@ -215,6 +215,8 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'kkga/vim-envy'
+    Plug 'adrian5/oceanic-next-vim'
     Plug 'sainnhe/forest-night'
     Plug 'noahfrederick/vim-hemisu'
     Plug 'franbach/miramare'
