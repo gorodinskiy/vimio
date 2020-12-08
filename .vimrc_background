@@ -48,6 +48,19 @@ set background=light
 let g:github_colors_soft = 1
 let g:lightline = { 'colorscheme': 'github' }
 colorscheme github
+
+let g:airline_theme = "github"
+
+hi NonText guibg='#f6f6f6'
+hi EndOfBuffer guibg='#f6f6f6'
+hi VertSplit guifg='#8f8f8f' guibg='#f6f6f6'
+hi Normal guibg='#f6f6f6'
+hi LineNr guibg='#f6f6f6'
+
+hi GitGutterAdd guibg='#f6f6f6'
+hi GitGutterChange guibg='#f6f6f6'
+hi GitGutterDelete guibg='#f6f6f6'
+hi GitGutterChangeDelete guibg='#f6f6f6'
 " }}}
 
 " xcode {{{
