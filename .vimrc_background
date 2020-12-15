@@ -61,6 +61,22 @@ hi GitGutterAdd guibg='#f6f6f6'
 hi GitGutterChange guibg='#f6f6f6'
 hi GitGutterDelete guibg='#f6f6f6'
 hi GitGutterChangeDelete guibg='#f6f6f6'
+hi Operator gui=none
+hi String guifg='#22863a'
+hi htmlTag guifg='#22863a'
+hi xmlTagN guifg='#22863a'
+hi htmlString guifg='#032f62'
+hi xmlString guifg='#032f62'
+hi Error guifg='#f6f6f6'
+" }}}
+
+" intellij {{{
+" let g:lightline = { 'colorscheme': 'intellij' }
+" colorscheme intellij
+" hi typescriptBraces guifg='#383a42'
+" hi typescriptBlock guifg='#383a42'
+" hi jsImport guifg='#001cac'
+" hi jsFrom guifg='#001cac'
 " }}}
 
 " xcode {{{
@@ -70,7 +86,7 @@ hi GitGutterChangeDelete guibg='#f6f6f6'
 
 " onehalf {{{
 " set background=light
-" " let g:lightline = { 'colorscheme': 'onehalflight' }
+" let g:lightline = { 'colorscheme': 'onehalflight' }
 " colorscheme onehalflight
 " let g:airline_theme='onehalflight'
 " }}}
