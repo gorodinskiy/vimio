@@ -67,6 +67,7 @@ hi htmlTag guifg='#22863a'
 hi xmlTagN guifg='#22863a'
 hi htmlString guifg='#032f62'
 hi xmlString guifg='#032f62'
+hi link gitconfigSection ghPurple
 hi Error guifg='#f6f6f6'
 " }}}
 
