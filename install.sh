@@ -17,7 +17,7 @@ rm -rf ~/vimio
 rm -rf ~/.fzf
 
 echo "⚙️  downloading latest version"
-git clone --depth 1 -b master --recursive https://github.com/gko/vimio
+git clone --depth 1 -b main --recursive https://github.com/gko/vimio
 
 if [[ "$osname" == "Darwin" || "$osname" == "Linux" ]]; then
     echo "🚧 removing current vim settings"
