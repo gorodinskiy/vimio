@@ -46,16 +46,18 @@ set background=light
 
 " Github {{{
 let g:github_colors_soft = 1
-let g:lightline = { 'colorscheme': 'github' }
-colorscheme github
+let g:lightline = { 'colorscheme': 'github_light' }
+colorscheme github-light
 
-let g:airline_theme = "github"
+let g:airline_theme = "github_light"
 
 hi NonText guibg='#f6f6f6'
 hi EndOfBuffer guibg='#f6f6f6'
 hi VertSplit guifg='#8f8f8f' guibg='#f6f6f6'
 hi Normal guibg='#f6f6f6'
 hi LineNr guibg='#f6f6f6'
+hi SignColumn guibg='#f6f6f6'
+hi Pmenu guifg='#333333' guibg='#ffffff'
 
 hi GitGutterAdd guibg='#f6f6f6'
 hi GitGutterChange guibg='#f6f6f6'
