@@ -215,6 +215,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'jeffkreeftmeijer/vim-dim'
     Plug 'chiendo97/intellij.vim'
     Plug 'kkga/vim-envy'
     Plug 'adrian5/oceanic-next-vim'
