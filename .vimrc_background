@@ -58,6 +58,7 @@ hi Normal guibg='#f6f6f6'
 hi LineNr guibg='#f6f6f6'
 hi SignColumn guibg='#f6f6f6'
 hi Pmenu guifg='#333333' guibg='#ffffff'
+hi link typescriptBraces Normal
 
 hi GitGutterAdd guibg='#f6f6f6'
 hi GitGutterChange guibg='#f6f6f6'
@@ -69,7 +70,7 @@ hi htmlTag guifg='#22863a'
 hi xmlTagN guifg='#22863a'
 hi htmlString guifg='#032f62'
 hi xmlString guifg='#032f62'
-hi link gitconfigSection ghPurple
+hi link gitconfigSection Function
 hi Error guifg='#f6f6f6'
 " }}}
 
@@ -115,6 +116,6 @@ hi Error guifg='#f6f6f6'
 " }}}
 
 if has('nvim')
-    highlight Statement cterm=italic gui=italic
+    " highlight Statement cterm=italic gui=italic
     highlight Comment cterm=italic gui=italic
 endif
