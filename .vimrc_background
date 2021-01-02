@@ -1,4 +1,4 @@
-set background=light
+set background=dark
 
 " gruvbox {{{
 " let g:gruvbox_contrast_dark="soft"
