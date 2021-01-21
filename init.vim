@@ -215,6 +215,7 @@ call plug#begin()
 " }}}
 
 " Colorschemes {{{
+    Plug 'yasukotelin/shirotelin'
     Plug 'senran101604/neotrix.vim'
     Plug 'jeffkreeftmeijer/vim-dim'
     Plug 'chiendo97/intellij.vim'
