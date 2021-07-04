@@ -153,7 +153,8 @@ call plug#begin()
                 \ 'DisableAutocorrect'
             \ ] }
 
-    Plug 'wsdjeg/vim-fetch'
+    Plug 'bogado/file-line'
+    " Plug 'wsdjeg/vim-fetch'
     Plug 'gko/upside-down'
     Plug 'kristijanhusak/vim-carbon-now-sh', { 'on': 'CarbonNowSh' }
 
