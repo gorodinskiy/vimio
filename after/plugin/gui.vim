@@ -6,8 +6,8 @@ if has("gui_running")
 
     if has("unix")
         if has("gui_mac") || has("gui_macvim")
-            set guifont=Monaco:h14
-            set linespace=4
+            set guifont=IBM\ Plex\ Mono\ 12
+            set linespace=5
             set macmeta
         else
             let os = substitute(system('uname'), "\n", "", "")
