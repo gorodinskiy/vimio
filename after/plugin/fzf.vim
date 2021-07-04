@@ -19,7 +19,7 @@ if has('nvim') && exists("*nvim_open_win")
       \ "fg+": ["fg", "CursorLine", "CursorColumn", "Normal"],
       \ "bg+": ["bg", "ColorColumn", "CursorLine", "CursorColumn", "Normal"]}
 
-    let $FZF_DEFAULT_OPTS='--layout=reverse --margin=1,4'
+    let $FZF_DEFAULT_OPTS='--layout=reverse --margin=1,4 --no-color'
     let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
     function! FloatingFZF()
