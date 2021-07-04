@@ -73,6 +73,8 @@ set noshowmatch " don't show pair <> в HTML
 
 " status line
 set laststatus=2
+" https://stackoverflow.com/a/40191092
+set statusline=%{'\ '}%F%m%r%h%w%=\ %y\ %l,%c%{'\ '}
 
 " set paste
 set nopaste
