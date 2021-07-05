@@ -30,17 +30,6 @@ call plug#begin()
             \ ] }
 
     Plug 'vim-scripts/TaskList.vim', { 'on':  'TaskList' }
-    Plug 'scrooloose/nerdtree', {
-            \ 'on': [
-                \ 'NERDTree',
-                \ 'NERDTreeCWD',
-                \ 'NERDTreeClose',
-                \ 'NERDTreeFind',
-                \ 'NERDTreeFocus',
-                \ 'NERDTreeFromBookmark',
-                \ 'NERDTreeMirror',
-                \ 'NERDTreeToggle'
-            \ ] }
 
     Plug 'voldikss/vim-floaterm', {
             \ 'on': [
@@ -198,10 +187,11 @@ call plug#begin()
 " LSP {{{
     if has('nvim') && has('nvim-0.5.0')
         Plug 'neovim/nvim-lspconfig'
-        Plug 'nvim-lua/diagnostic-nvim'
         Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
         Plug 'Shougo/deoplete-lsp'
         Plug 'fszymanski/deoplete-emoji'
+        Plug 'rafcamlet/nvim-luapad', { 'on': 'Luapad' }
+        Plug 'kyazdani42/nvim-tree.lua', { 'on': ['NvimTreeToggle',  'NvimTreeRefresh', 'NvimTreeFindFile']}
         let g:deoplete#enable_at_startup = 1
     else
         if executable('npm')
@@ -212,6 +202,18 @@ call plug#begin()
 
             let g:UltiSnipsExpandTrigger="<nop>"
         endif
+
+        Plug 'scrooloose/nerdtree', {
+                        \ 'on': [
+                                \ 'NERDTree',
+                                \ 'NERDTreeCWD',
+                                \ 'NERDTreeClose',
+                                \ 'NERDTreeFind',
+                                \ 'NERDTreeFocus',
+                                \ 'NERDTreeFromBookmark',
+                                \ 'NERDTreeMirror',
+                                \ 'NERDTreeToggle'
+                        \ ] }
     endif
 " }}}
 
